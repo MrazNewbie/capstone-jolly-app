@@ -12,7 +12,23 @@ app.use(
 );
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"));
+  res.sendFile(path.join(__dirname, "public/index.html"));
 });
 
-app.listen(port, () => console.info(`Berjalan di port ${port}`));
+app.get("/public/index.html", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/index.html"));
+});
+
+app.get("/public/mountains.html", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/mountains.html"));
+});
+
+app.get("/public/inventory.html", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/inventory.html"));
+});
+
+app.get("/public/login.html", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/login.html"));
+});
+
+app.listen(port, () => console.info(`Running on port ${port}`));
