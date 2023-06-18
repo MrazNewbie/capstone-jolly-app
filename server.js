@@ -3,6 +3,7 @@ const app = express();
 const path = require("path");
 const port = 8080;
 
+// Menggunakan express static untuk mengarahkan file frontend yang berada di dalam folder public
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/public/css", express.static(path.join(__dirname, "public/css")));
 app.use("/public/js", express.static(path.join(__dirname, "public/js")));
@@ -11,6 +12,7 @@ app.use(
   express.static(path.join(__dirname, "public/images"))
 );
 
+//Mengarahkan setiap file html agar bisa di akses
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public/index.html"));
 });

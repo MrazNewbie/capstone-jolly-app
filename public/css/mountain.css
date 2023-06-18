@@ -1,0 +1,162 @@
+/* ================  Mountain =================*/
+
+.mountains {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 30px;
+}
+
+.mountains .menuMountain {
+  position: relative;
+  display: grid;
+  min-height: 500px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.mountains .cardMountain {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.cardMountain h2 {
+  font-weight: 600;
+  color: var(--color-white);
+}
+
+.cardMountain .btn {
+  position: relative;
+  padding: 5px 10px;
+  background: var(--color-grey1);
+  text-decoration: none;
+  color: var(--color-white);
+  border-radius: 6px;
+}
+
+.mountains table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.mountains table td {
+  font-weight: 600;
+}
+
+.mountains .menuMountain table tr {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 0.3rem;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  color: var(--color-black);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.9);
+}
+
+.mountains .menuMountain table tr:nth-child(1) {
+  background-image: url(/public/images/gunungbromo.jpg);
+}
+
+.mountains .menuMountain table tr:nth-child(2) {
+  background-image: url(/public/images/gunungrinjani.jpg);
+}
+
+.mountains .menuMountain table tr:nth-child(3) {
+  background-image: url(/public/images/GunungSlamet.jpg);
+}
+
+.mountains .menuMountain table tr:nth-child(4) {
+  background-image: url(/public/images/gunungprau.jpg);
+}
+
+.mountains .menuMountain table tr:nth-child(5) {
+  background-image: url(/public/images/gunungsemeru.jpg);
+}
+
+.mountains .menuMountain table tr:nth-child(6) {
+  background-image: url(/public/images/gunungijen.jpg);
+}
+
+.mountains .menuMountain table tr:nth-child(7) {
+  background-image: url(/public/images/gunungpatuha.jpg);
+}
+
+.mountains .menuMountain table tr:nth-child(8) {
+  background-image: url(/public/images/gunungkelimutu.jpg);
+}
+
+/* ============ Responsive =============*/
+
+/* ======== Tablet ========*/
+@media (max-width: 991px) {
+  .navigation {
+    left: -300px;
+  }
+  .navigation.active {
+    width: 300px;
+    left: 0;
+  }
+  .main {
+    width: 100%;
+    left: 0;
+  }
+  .main.active {
+    left: 300px;
+  }
+  .cardBox {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ======== Tablet ========*/
+@media (max-width: 768px) {
+  .mountains {
+    grid-template-columns: 1fr;
+  }
+  .menuMountain {
+    overflow-x: auto;
+  }
+  .menuMountain table tbody td {
+    white-space: nowrap;
+  }
+}
+
+/* ========= Handphone =========*/
+@media (max-width: 480px) {
+  .cardBox {
+    grid-template-columns: repeat(1, 0.63fr);
+  }
+
+  .cardMountain h2 {
+    font-size: 20px;
+  }
+  .profile-picture {
+    min-width: 40px;
+  }
+  .navigation {
+    width: 100%;
+    left: -100%;
+    z-index: 1000;
+  }
+  .navigation.active {
+    width: 100%;
+    left: 0;
+  }
+  .toggle {
+    z-index: 10001;
+  }
+  .main.active .toggle {
+    color: var(--color-white);
+    position: fixed;
+    right: 0;
+    left: initial;
+  }
+}

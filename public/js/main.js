@@ -1,3 +1,6 @@
+// api key for google maps
+/*====== AIzaSyD3Qqv7uhxGWlcChpvVvvGDlksPD3xQPbA ======== */
+
 //redirect pada saat click profile
 function redirectToLogin() {
   window.location.href = "/public/login.html";
