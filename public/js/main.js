@@ -29,3 +29,32 @@ toggle.onclick = function () {
   navigation.classList.toggle("active");
   main.classList.toggle("active");
 };
+
+// Mengaktifkan search
+function handleSearch(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    const searchInput = document.getElementById("searchInput");
+    const keyword = searchInput.value.toLowerCase();
+
+    if (keyword.trim() === "") {
+      window.location.href = "/public/mountains.html";
+    } else {
+      performSearch(keyword);
+    }
+  }
+}
+
+function performSearch(keyword) {
+  const cardNames = document.getElementsByClassName("cardName");
+
+  for (let i = 0; i < cardNames.length; i++) {
+    const name = cardNames[i].textContent.toLowerCase();
+
+    if (name.includes(keyword)) {
+      cardNames[i].parentNode.parentNode.style.display = "block";
+    } else {
+      cardNames[i].parentNode.parentNode.style.display = "none";
+    }
+  }
+}

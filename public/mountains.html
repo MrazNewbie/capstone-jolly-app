@@ -51,7 +51,7 @@
           <li>
             <a href="/public/login.html">
               <span class="icon"><i class="uil uil-sign-in-alt"></i></span>
-              <span class="title">Sing in</span>
+              <span class="title">Sign in</span>
             </a>
           </li>
         </ul>
@@ -67,8 +67,13 @@
 
           <div class="search">
             <label>
-              <input type="text" placeholder="Search Mountain" />
-              <ion-icon name="search-outline"></ion-icon>
+              <input
+                type="text"
+                id="searchInput"
+                placeholder="Search Mountain"
+                onkeydown="handleSearch(event)"
+              />
+              <ion-icon name="search-outline" id="searchButton"></ion-icon>
             </label>
           </div>
 
@@ -87,7 +92,7 @@
             <table>
               <thead></thead>
 
-              <tbody>
+              <tbody id="mountainTable">
                 <tr>
                   <td data-image="/public/images/gunungbromo.jpg">
                     Gunung Bromo
@@ -113,7 +118,7 @@
                 </tr>
                 <tr>
                   <td data-image="/public/images/gunungsemeru.jpg">
-                    Gunung semeru
+                    Gunung Semeru
                   </td>
                 </tr>
 
@@ -143,6 +148,7 @@
 
     <!---Javascript------>
     <script src="/public/js/main.js"></script>
+    <script src="/public/js/mountain.js"></script>
     <!----Ionicon----->
     <script
       type="module"
