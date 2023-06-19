@@ -33,4 +33,7 @@ app.get("/public/login.html", (req, res) => {
   res.sendFile(path.join(__dirname, "public/login.html"));
 });
 
+app.get("/public/bromo.html", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/bromo.html"));
+});
 app.listen(port, () => console.info(`Running on port ${port}`));
