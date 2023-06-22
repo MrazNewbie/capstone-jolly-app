@@ -12,7 +12,12 @@
     />
 
     <!-----css---->
+    <link rel="stylesheet" href="/public/css/inventory.css" />
     <link rel="stylesheet" href="/public/css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css"
+    />
   </head>
   <body class="body-index">
     <!----- Navigation------->
@@ -50,7 +55,7 @@
           <li>
             <a href="/public/views/login.html">
               <span class="icon"><i class="uil uil-sign-in-alt"></i></span>
-              <span class="title">Sing in</span>
+              <span class="title">Sign in</span>
             </a>
           </li>
         </ul>
@@ -66,13 +71,55 @@
 
           <div class="search">
             <label>
-              <input type="text" placeholder="Search Mountain" />
-              <ion-icon name="search-outline"></ion-icon>
+              <input
+                type="text"
+                id="searchInput"
+                placeholder="Search Mountain"
+                onkeydown="handleSearch(event)"
+              />
+              <ion-icon name="search-outline" id="searchButton"></ion-icon>
             </label>
           </div>
 
-          <div class="profile-picture">
-            <img src="/public/images/profile-1.jpg" />
+          <div class="profile-picture" onclick="redirectToLogin()">
+            <img src="/public/images/story-1.jpg" />
+          </div>
+        </div>
+
+        <!-------- Inventory ---------->
+        <div class="container mt-5">
+          <h1 class="mb-4">ToDo List App</h1>
+          <div class="row form-container">
+            <div class="col-md-6">
+              <form id="todoForm">
+                <div class="mb-3">
+                  <label for="itemName" class="form-label">Item Name:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="itemName"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="quantity" class="form-label">Quantity:</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="quantity"
+                    required
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary">Add Item</button>
+              </form>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mx-auto">
+              <div class="result-container">
+                <ul id="itemList"></ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -80,11 +127,13 @@
 
     <!---Javascript------>
     <script src="/public/js/main.js"></script>
+    <script src="/public/js/inventory.js"></script>
     <!----Ionicon----->
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
     <script
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"

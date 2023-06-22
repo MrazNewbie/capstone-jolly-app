@@ -7,7 +7,7 @@ function handleSearch(event) {
     const keyword = searchInput.value.toLowerCase();
 
     if (keyword.trim() === "") {
-      window.location.href = "/public/mountains.html";
+      window.location.href = "/public/views/mountains.html";
     } else {
       performSearch(keyword);
     }

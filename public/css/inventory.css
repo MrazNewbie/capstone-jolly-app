@@ -1,0 +1,75 @@
+:root {
+  --color-black: #222831;
+  --color-grey1: #404258;
+  --color-grey: #808080;
+  --color-blue: #0a2a5e;
+  --color-navy: #1a2b42;
+  --color-white: #ffffff;
+  --color-gold: #ffd700;
+  --color-pink: #ff69b4;
+
+  --border-radius: 2rem;
+  --card-border-radius: 1rem;
+
+  --btn-padding: 0.6rem 2rem;
+  --search-padding: 0.6rem 1rem;
+  --card-padding: 1rem;
+
+  --sticky-top-left: 5.4rem;
+  --sticky-top-right: -18rem;
+}
+
+body {
+  background-color: #f8f9fa;
+}
+
+.container {
+  background-color: var(--color-grey);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.form-container {
+  margin-bottom: 20px;
+}
+
+.result-container {
+  max-height: 300px;
+  overflow-y: auto;
+  margin: 0 auto;
+  width: 60%;
+}
+
+.result-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.result-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.result-container::-webkit-scrollbar-track {
+  background-color: #f2f2f2;
+}
+
+.result-container ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.result-container li {
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.result-container .item-name {
+  font-weight: bold;
+}
+
+.result-container .badge {
+  margin-left: 5px;
+}
