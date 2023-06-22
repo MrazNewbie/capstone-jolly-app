@@ -254,6 +254,10 @@
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.98);
 }
 
+.cardBox .card a {
+  color: var(--color-black);
+}
+
 .cardBox .card:nth-child(1) {
   background-image: url(/public/images/gunungbromo.jpg);
 }
@@ -298,6 +302,10 @@
   padding: 20px;
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
   border-radius: 20px;
+}
+
+.details .recentMountain a {
+  color: var(--color-black);
 }
 
 .details .cardHeader {

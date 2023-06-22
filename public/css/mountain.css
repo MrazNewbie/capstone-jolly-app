@@ -17,6 +17,10 @@
   border-radius: 10px;
 }
 
+.mountains .menuMountain a {
+  color: var(--color-black);
+}
+
 .mountains .cardMountain {
   display: flex;
   justify-content: space-between;
